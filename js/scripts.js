@@ -5,7 +5,7 @@ $(document).on("submit", "form#word-input", function(){
   var vowel = "aeiouq";
   var match = -1;
   var index = -1;
-  var indexQ
+  var indexQ;
 
   // find index of first vowel
   for (var x = 0; x < str.length && match < 0; x++) {
