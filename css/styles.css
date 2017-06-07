@@ -4,8 +4,9 @@ body {
   height: 100%;
   background-color: #102027;
 }
+
 body {
-  color: #102027;
+
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
@@ -70,12 +71,13 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   .masthead-brand {
     float: left;
   }
   .nav-masthead {
     float: right;
+    padding-top: 30px;
   }
 }
 
@@ -167,4 +169,13 @@ body {
 #submit-button-text {
   font-size: 6em;
   color: pink;
+}
+
+#copyright {
+  margin-top: 10px;
+  font-size: 0.5em;
+}
+
+#pigon {
+color: rgba(255,255,255,.5);
 }
