@@ -12,25 +12,23 @@ $(document).on("submit", "form#word-input", function(){
 
   // find index of first vowel
     ogStrArray.forEach(function(element) {
-      for (var x = 0; x < element.length && match < 0; x++) {
-        console.log(element);
-        match = vowel.indexOf(element.charAt(x));
-        if (match >= 0) {
-          index = x;
-          indexQ = index + 2;
-        }
+    for (var x = 0; x < element.length && match < 0; x++) {
+      match = vowel.indexOf(element.charAt(x));
+      if (match >= 0) {
+        index = x;
+        indexQ = index + 2;
       }
-      if (element.charAt(index) === 'q'){
-        element = element.slice(indexQ)  + element.substring(0, indexQ) +  "ay";
-      } else if (element.charAt(index) === 'q'){
-        element = element.slice(indexQ)  + element.substring(0, indexQ) +  "ay";
-      } else if (index > 0) {
-        element = element.slice(index) + element.substring(0, index) + "ay";
-      } else {
-        element = element.slice(index) + element.substring(0, index) + "way";
-      }
-      newStrArray.push(element);
-    });
+    }
+    if (element.charAt(index) === 'q'){
+      element = element.slice(indexQ)  + element.substring(0, indexQ) +  "ay";
+    } else if (index > 0) {
+      element = element.slice(index) + element.substring(0, index) + "ay";
+    } else {
+      element = element.slice(index) + element.substring(0, index) + "way";
+    }
+    match = -1;
+    newStrArray.push(element);
+  });
   console.log(newStrArray);
   pigStr = newStrArray.join(" ");
   $("#output").empty();
